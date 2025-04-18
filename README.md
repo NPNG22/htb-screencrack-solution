@@ -24,7 +24,7 @@ We explore a full **SSRF-to-RCE** exploit chain by injecting malicious job paylo
 
 ## Attack Chain Overview (flow)
 
-```mermaid  
+``` 
   A[User Input Field] --> B[cURL Fetch (SSRF)]
   B --> C[gopher://127.0.0.1:6379] // Redis is on port 6379
   C --> D[Redis Queue]
