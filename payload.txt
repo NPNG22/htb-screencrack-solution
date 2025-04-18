@@ -1,0 +1,8 @@
+O:15:"App\Jobs\rmFile":1:{
+  s:9:"fileQueue";
+  O:21:"App\Message\FileQueue":3:{
+    s:4:"uuid";s:39:"dummy; touch /www/public/src/test.txt; #";
+    s:3:"ext";s:3:"txt";
+    s:8:"filePath";s:1:"x";
+  }
+}
