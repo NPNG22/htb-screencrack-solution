@@ -38,7 +38,7 @@ We explore a full **SSRF-to-RCE** exploit chain by injecting malicious job paylo
 
 **Step 1:** 
 We can see default job queues in Redis DB
-
+<br>
 ![1) default keys - job queues](https://github.com/user-attachments/assets/b88c97cd-886e-4404-a6f2-444f73530e75)
 
 
