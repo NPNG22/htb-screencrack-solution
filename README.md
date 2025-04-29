@@ -69,7 +69,7 @@ NOTE:
 
 ~ A specific protocol will show error when entered, but it runs and gets executed in the backend and get the job done.
 
-~ Local docker instance will help to see how the queue and job actually works. (Here, we can can executed the jobs faster and wont have to wait for 10 min, as we     have access to the shell directly and can execute the command: 'php artisan queue:work --once').
+~ Local docker instance will help to see how the queue and job actually works. (Here, we can execute the jobs faster and won't have to wait for 10 min, as we have access to the shell directly to run the command: 'php artisan queue:work --once').
 
 ---
 
