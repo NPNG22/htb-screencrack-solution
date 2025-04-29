@@ -36,28 +36,38 @@ We explore a full **SSRF-to-RCE** exploit chain by injecting malicious job paylo
 
 ## Payload generation
 
-Step 1:
+**Step 1:** 
 We can see default job queues in Redis DB
+
 ![1) default keys - job queues](https://github.com/user-attachments/assets/b88c97cd-886e-4404-a6f2-444f73530e75)
 
-Step2:
+
+**Step2:** 
 Through the local Docker instance, we can see the actual job in the default queue (laravel_database_queues:default)
+
 ![2) actual job format](https://github.com/user-attachments/assets/fdd513c6-f298-47e0-9986-2af446c9f517)
 
-Step 3:
+
+**Step 3:** 
 It becomes clear after proper indents and formatting, and easier to exploit now.
+
 ![3) simplified format (json)](https://github.com/user-attachments/assets/d3244c0b-719a-40c7-b99c-8f3ed011a122)
 
-Step 4:
+
+**Step 4:** 
 You may need to convert it back to the format actually being executed (Serialize back a specific part properly).
 
-Step 5:
+
+**Step 5:** 
 Ultimately, encode the payload with the Redis push command to enter the job inside the default queue based on the **protocol** used.
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 NOTE: 
 ~ May have to wait 10 min for the job to be executed because of the design in code (sleep=600).
 ~ A specific protocol will show error when entered, but it runs and gets executed in the backend and get the job done.
 ~ Local docker instance will help to see how the queue and job actually works. (Here, we can can executed the jobs faster and wont have to wait for 10 min, as we     have access to the shell directly and can execute the command: 'php artisan queue:work --once').
+
 ---
 
 ## Status
